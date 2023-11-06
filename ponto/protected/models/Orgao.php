@@ -52,7 +52,7 @@ class Orgao extends CActiveRecord
      */
     public function tableName()
     {
-        return 'Orgao';
+        return 'orgao';
     }
 
     /**

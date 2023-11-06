@@ -3,7 +3,7 @@
         <img id="logo" src="<?=Yii::app()->baseUrl?>/imgs/logoPonto.png" width="140" alt="Logo do Ponto Eletrônico da UFRGS"/>
 	</div>
 
-	<? if (count($pessoa->DadosFuncionais) == 1): ?>
+	<? //if (count($pessoa->DadosFuncionais) == 1): ?>
 
 	<div class="col s12 m7">
 		<div id="divUsuario" class="flow-text">
@@ -26,6 +26,7 @@
 			</picture>
 		</div>	
 	</div>
+
 </header>
 <div class="row">
 	<div class="col s12 m5" id="divRegistrosHoje">		
@@ -134,6 +135,10 @@
 		</div>
 		<p id="mensagemAjuste" class="center">Para realizar ajustes e acompanhamento, acesse o Portal de Serviços.</p>
 	</div>
+
+	
 </div>
 
-<? endif; ?>
+ <? //endif; ?>
+
+<?// echo $pessoa->DadosFuncionais[0] ?>

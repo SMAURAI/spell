@@ -393,9 +393,10 @@ class RegistroController extends BaseController
      */
     public function actionSair()
     {
-        Yii::app()->session->setSessionName("PontoUFRGS");
+        //Yii::app()->session->setSessionName("PontoUFRGS");
         Yii::app()->session->destroy();
         Yii::app()->session->close();
+        Yii::app()->session->setSessionName("PontoUFRGS");
         $this->actionLogin();
     }
 

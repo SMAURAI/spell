@@ -67,7 +67,7 @@ class HorariosController extends BaseController
             if(isset($_REQUEST['Orgaos'])) { // Selecionou um dos órgãos sob responsabilidade 
                 $orgaos = $this->retornaOrgaosResponsabilidade($id_pessoa);
                 $controle  = true;
-                $orgao     = Orgao::model()->findByPk($_REQUEST['Orgaos']); 
+                $orgao     = Orgao::model()->findByPk($_REQUEST['orgaos']); 
                 $definicao = DefinicoesOrgao::model()->findByPk($orgao->id_orgao);
                 $defOrgaoSuperior = ($orgao->getAttribute("id_orgao_superior") == NULL ? NULL : DefinicoesOrgao::model()->findByPk($orgao->getAttribute("id_orgao_superior")));
                 $aLimitesHorario['hora_inicio_expediente'] = "00:00";
@@ -109,10 +109,10 @@ class HorariosController extends BaseController
      */
     public function actionSalvarHorarios()
     {   
-        if (isset($_POST['Orgao'])){
+        if (isset($_POST['orgao'])){
             $msg="";
             $postDefinicoes = $_POST['DefinicoesOrgao'];
-            $orgao     = Orgao::model()->find('t.id_orgao = '.$_POST['Orgao']);            
+            $orgao     = Orgao::model()->find('t.id_orgao = '.$_POST['orgao']);            
             $definicao = DefinicoesOrgao::model()->find('t.id_orgao = '.$orgao->id_orgao);
             $defOrgaoSuperior = DefinicoesOrgao::model()->find('t.id_orgao = '.$orgao->getAttribute("id_orgao_superior"));
             

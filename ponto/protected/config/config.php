@@ -20,10 +20,10 @@ return array(
         ),
         // TODO - configurar acesso ao banco de dados
         'db'=>array(
-            'connectionString' => 'mysql:host=localhost:3307;dbname=ponto',
+            'connectionString' => 'mysql:host=localhost:3306;dbname=ponto',
             'emulatePrepare' => true,
             'username' => 'root',
-            'password' => 'usbw',
+            'password' => 'inovar123',
             'charset' => 'utf8',
         ),
         'urlManager' => array(
@@ -46,9 +46,9 @@ return array(
                     'filter' => 'CLogFilter',
                 ),
                 // uncomment the following to show log messages on web pages
-    //                array(
-    //                    'class'=>'CWebLogRoute',
-    //                ),
+                    array(
+                        'class'=>'CWebLogRoute',
+                    ),
             ),
         ),
     ),
